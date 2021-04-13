@@ -1,0 +1,209 @@
+<html>
+
+<head>
+
+<title>
+
+ハゲ鯖簡単期待値計算機
+
+</title>
+
+</head>
+
+<div class = "taitoru">
+
+ハゲ鯖簡単期待値計算機(カス)
+
+</div>
+
+会心率は自分で足し算しろ<br>
+計算結果くらい覚えろ<br>
+<br>
+
+<span class = "kekka">
+
+計算結果
+
+</span>
+
+<form action="#" name="calForm"> 
+
+<script type = "text/javascript" src = "cl.js" ></script>
+<script type = "text/javascript" src= "so.js" ></script>
+
+<br>
+非怒り<br>
+<input type = "text" name = "hiikari" value = "" ><br>
+怒り<br>
+<input type = "text" name = "ikari" value = ""><br>
+怒り非怒りの平均<br>
+<input type = "text" name = "heikin" value = ""><br>
+
+<input type="button" name="keisan" value="計算" onClick="Cal();"> 
+
+<hr>
+
+武器種<br>
+<label><input type = "radio" name  = "buki" data-target = "c1" >剣士</label>／
+<label><input type = "radio" name  = "buki" data-target = "c2" >ガン</label>		<br>
+
+<input type = "text" name = "s" value="" placeholder = "装備詳細の武器攻撃力を入力" > <br>
+
+<input type = "text" name = "c" value="" placeholder = "ステータスの会心率を入力" > <br>
+
+
+</form>
+
+護符爪
+<select id="gofutsume" name = "gofutsume">
+	<option default value=0>攻撃力が上がる</option>
+		<option value=6>護符のみ(+6)</option>
+		<option value=9>爪のみ(+9)</option>
+		<option value=15>護符爪(+15)</option>
+</select>
+
+<br>
+
+<div class = "cx c1">
+斬れ味
+<select id="kireaji" name ="kireaji">
+	<option default value=1>色</option>
+		<option value=0.5>赤(0.5)</option>
+		<option value=0.75>橙(0.75)</option>
+		<option value=1>黄(1)</option>
+		<option value=1.05>緑(1.05)</option>
+		<option value=1.2>青(1.2)</option>
+		<option value=1.32>白(1.32)</option>
+		<option value=1.39>紫(1.39)</option>
+</select>
+</div>
+
+<div class = "midashi">スキル</div>
+
+<div class = "cx c2">
+弾強化
+<select id="tama" name ="tama">
+	<option default value=1>弾の威力上昇</option>
+		<option value=1.05>1(1.05倍)</option>
+		<option value=1.1>2(1.1倍)</option>
+		<option value=1.2>3(1.2倍)</option>
+</select>
+</div>
+
+攻撃
+<select id="kougeki" name = "kougeki">
+	<option default value=0>プレイヤーの攻撃力を上げる</option>
+		<option value=3>1(攻撃力+3)</option>
+		<option value=6>2(攻撃力+6)</option>
+		<option value=9>3(攻撃力+9)</option>
+		<option value=7>4(攻撃力*1.05+7)</option>
+		<option value=8>5(攻撃力*1.06+8)</option>
+		<option value=9>6(攻撃力*1.08+9)</option>
+		<option value=10>7(攻撃力*1.1+10)</option>
+</select>
+
+<br>
+
+フルチャージ
+<select id="furucha" name = "furucha">
+	<option default value=0>体力が最大の時に攻撃力が上がる</option>
+		<option value=5>1(攻撃力+5)</option>
+		<option value=10>2(攻撃力+10)</option>
+		<option value=15>3(攻撃力+15)</option>
+</select>
+
+<br>
+
+逆恨み
+<select id="sakaurami" name = "sakauramii">
+	<option default value=0>体力ゲージに赤がある時攻撃力が上がる</option>
+		<option value=5>1(攻撃力+5)</option>
+		<option value=10>2(攻撃力+10)</option>
+		<option value=15>3(攻撃力+15)</option>
+		<option value=20>4(攻撃力+20)</option>
+		<option value=25>5(攻撃力+25)</option>
+</select>
+
+<br>
+
+死中に活
+<select id="shichu" name = "shichu">
+	<option default value=0>状態異常の時攻撃力が上がる</option>
+		<option value=5>1(攻撃力+5)</option>
+		<option value=10>2(攻撃力+10)</option>
+		<option value=20>3(攻撃力+20)</option>
+</select>
+
+<br>
+
+逆襲
+<select id="gyakushu" name = "gyakushu">
+	<option default value=1>効果発動で攻撃力が上がる</option>
+		<option value=1.05>15(攻撃力*1.05)</option>
+		<option value=1.1>2(攻撃力*1.1)</option>
+		<option value=1.15>3(攻撃力*1.15)</option>
+</select>
+
+<br>
+
+火事場
+<select id="kajiba" name = "kajiba">
+	<option default value=1>効果発動時攻撃力を上げる</option>
+		<option value=1>1(攻撃力強化は無い)</option>
+		<option value=1.05>2(1.05倍)</option>
+		<option value=1.05>3(1.05倍)</option>
+		<option value=1.1>4(1.1倍)</option>
+		<option value=1.3>5(1.3倍)</option>
+</select>
+
+<br>
+
+不屈
+<select id="fukutsu" name = "fukutsu">
+	<option default value=1>プレイヤーの攻撃力を最大2回強化する</option>
+		<option value=1.1>1回目(1.1倍)</option>
+		<option value=1.21>2回目(約1.21倍)</option>
+</select>
+
+<br>
+
+攻めの守勢
+<select id="shusei" name = "shusei">
+	<option default value=1>プレイヤーの攻撃力を上げる</option>
+		<option value=1.05>1(攻撃力*1.05)</option>
+		<option value=1.1>3(攻撃力*1.1)</option>
+		<option value=1.15>3(攻撃力*1.15)</option>
+</select>
+
+<br>
+
+挑戦者
+<select id="chousensha" name = "chosensha">
+	<option default value=0>効果発動時攻撃力と会心率が上がる</option>
+		<option value=3>1(攻撃力+4会心率+3)</option>
+		<option value=8>2(攻撃力+8会心率+5)</option>
+		<option value=12>3(攻撃力+12会心率+7)</option>
+		<option value=16>4(攻撃力+16会心率+10)</option>
+		<option value=20>5(攻撃力+20会心率+15)</option>
+</select>
+
+<br>
+
+鈍器
+<select id="donki" name = "donki">
+	<option default value=1>斬れ味が悪いと攻撃力が上がる</option>
+		<option value=1.05>1(黄以下で1.05倍)</option>
+		<option value=1.1>2(黄以下で1.1倍)</option>
+		<option value=1.1>3(緑以下で1.1倍)</option>
+</select>
+
+<br>
+
+超会心
+<select id="choukaishin" name = "choukaishin">
+	<option default value=0.25>会心倍率を上げる</option>
+		<option value=0.3>1(会心倍率を1.3に)</option>
+		<option value=0.35>2(会心倍率を1.35に)</option>
+		<option value=0.4>3(会心倍率を1.4に)</option>
+</select>
+</html>
