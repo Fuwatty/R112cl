@@ -16,6 +16,7 @@ shusei=document.getElementById("shusei").value;
 donki=document.getElementById("donki").value;
 chousensha=document.getElementById("chousensha").value;
 choukaishin=document.getElementById("choukaishin").value;
+ekisu=document.getElementById("ekisu").value;
 
 inputValueS = document.calForm.s.value - 0;
 inputValueC = document.calForm.c.value - 0;
@@ -36,6 +37,7 @@ var shusei;
 var donki;
 var chousensha;
 var choukaishin;
+var ekisu;
 
 var gof=Number(gofutsume);
 var kire=Number(kireaji);
@@ -51,6 +53,7 @@ var shu=Number(shusei);
 var don=Number(donki);
 var cho=Number(chousensha);
 var clb=Number(choukaishin);
+var eki=Number(ekisu);
 
 if(kougeki==7)
 	{
@@ -99,7 +102,7 @@ if(chousensha==20)
 						}
 
 
-a = Math.floor((inputValueS*kougekijousan)+kou);
+a = Math.floor((Math.floor(inputValueS*eki)kougekijousan)+kou);
 B = (gof+furu+saka+sch)*gya;
 
 sts1 = Math.floor(a*don+B)*kaj*fuk*shu;
