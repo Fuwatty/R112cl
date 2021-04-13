@@ -102,7 +102,7 @@ if(chousensha==20)
 						}
 
 
-a = Math.floor((Math.floor(inputValueS*eki)*kougekijousan)+kou);
+a = Math.floor((Math.floor(inputValueS*eki+0.00001)*kougekijousan)+kou);
 B = (gof+furu+saka+sch)*gya;
 
 sts1 = Math.floor(a*don+B)*kaj*fuk*shu;
