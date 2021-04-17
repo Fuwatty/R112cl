@@ -22,7 +22,7 @@
 
 <span class = "kekka">
 
-計算結果
+物理計算結果
 
 </span>
 
@@ -38,6 +38,21 @@
 <input type = "text" name = "ikari" value = ""><br>
 怒り非怒りの平均<br>
 <input type = "text" name = "heikin" value = ""><br>
+	
+<br>
+
+属性計算結果
+
+<br>
+
+非怒り<br>
+<input type = "text" name = "ELhiikari" value = "" ><br>
+怒り<br>
+<input type = "text" name = "ELikari" value = ""><br>
+怒り非怒りの平均<br>
+<input type = "text" name = "ELheikin" value = ""><br>
+
+<br>
 
 <input type="button" name="keisan" value="計算" onClick="Cal();"> 
 
@@ -46,11 +61,12 @@
 武器種<br>
 <label><input type = "radio" name  = "buki" data-target = "c1" >剣士</label>／
 <label><input type = "radio" name  = "buki" data-target = "c2" >ガン</label>／
-<label><input type = "radio" name  = "buki" data-target = "c3" >操虫棍</label><br>
+<label><input type = "radio" name  = "buki" data-target = "c3" >操虫棍</label>／
+<label><input type = "radio" name  = "buki" data-target = "c4" >ライト</label><br>
 
 <input type = "text" name = "s" value="" placeholder = "装備詳細の武器攻撃力を入力" > <br>
 
-<input type = "text" name = "c" value="" placeholder = "ステータスの会心率を入力" > <br>
+<input type = "text" name = "c" value="" placeholder = "装備詳細の会心率のを入力" > <br>
 
 
 </form>
@@ -99,6 +115,16 @@
 		<option value=1.05>1(1.05倍)</option>
 		<option value=1.1>2(1.1倍)</option>
 		<option value=1.2>3(1.2倍)</option>
+</select>
+</div>
+
+<div class = "cx c4">
+速射強化
+<select id="tama" name ="tama">
+	<option default value=1>速射弾の威力上昇</option>
+		<option value=1.05>1(1.05倍)</option>
+		<option value=1.1>2(1.1倍)</option>
+		<option value=1.15>3(1.15倍)</option>
 </select>
 </div>
 
@@ -189,6 +215,16 @@
 
 <br>
 
+鈍器
+<select id="donki" name = "donki">
+	<option default value=1>斬れ味が悪いと攻撃力が上がる</option>
+		<option value=1.05>1(黄以下で1.05倍)</option>
+		<option value=1.1>2(黄以下で1.1倍)</option>
+		<option value=1.1>3(緑以下で1.1倍)</option>
+</select>
+
+<br>
+
 挑戦者
 <select id="chousensha" name = "chosensha">
 	<option default value=0>効果発動時攻撃力と会心率が上がる</option>
@@ -199,15 +235,7 @@
 		<option value=20>5(攻撃力+20会心率+15)</option>
 </select>
 
-<br>
 
-鈍器
-<select id="donki" name = "donki">
-	<option default value=1>斬れ味が悪いと攻撃力が上がる</option>
-		<option value=1.05>1(黄以下で1.05倍)</option>
-		<option value=1.1>2(黄以下で1.1倍)</option>
-		<option value=1.1>3(緑以下で1.1倍)</option>
-</select>
 
 <br>
 
