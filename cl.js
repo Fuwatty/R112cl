@@ -98,17 +98,17 @@ if(chousensha==20)
 						var chousenshajousan=0;
 						}
 
-if(zoko==4.00)
+if(zoko==4)
 	{
 	var zokobai=1.05;
 	}
-	else if(zoko===4.000)
+	else if(zoko===4.00)
 		{
 		var zokobai=1.1;	
 		}
-			else if(zoko===4.0000)
+			else if(zoko===4.000)
 			{
-			var zokobai=1.15;
+			var zokobai=1.2;
 			}
 
 if(kire==0.5)
