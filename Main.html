@@ -15,8 +15,6 @@
 ハゲ鯖簡単期待値計算機(カス)
 
 </div>
-
-会心率は自分で足し算しろ<br>
 計算結果くらい覚えろ<br>
 <br>
 
@@ -68,6 +66,7 @@
 
 <input type = "text" name = "c" value="" placeholder = "装備詳細の会心率のを入力" > <br>
 
+<input type = "text" name = "e" value="" placeholder = "装備詳細の属性値を入力" > <br>
 
 </form>
 
@@ -235,7 +234,49 @@
 		<option value=20>5(攻撃力+20会心率+15)</option>
 </select>
 
+<br>
 
+見切り
+<select id="mikiri" name = "mikiri">
+	<option default value=0>会心率を上げる</option>
+		<option value=5>1(会心率+5)</option>
+		<option value=10>2(会心率+10)</option>
+		<option value=15>3(会心率+15)</option>
+		<option value=20>4(会心率+20)</option>
+		<option value=25>5(会心率+25)</option>
+		<option value=30>6(会心率+30)</option>
+		<option value=40>7(会心率+40)</option>
+</select>
+
+<br>
+
+渾身
+<select id="konshin" name = "konshin">
+	<option default value=0>スタミナ最大で会心率が上がる</option>
+		<option value=10>1(会心率+10)</option>
+		<option value=20>2(会心率+20)</option>
+		<option value=30>3(会心率+30)</option>
+</select>
+
+<br>
+
+弱点特効
+<select id="jakuten" name = "jakuten">
+	<option default value=1>肉質45以上を攻撃で会心率+50</option>
+		<option value=15>1(会心率+15)</option>
+		<option value=30>2(会心率+30)</option>
+		<option value=50>3(会心率+50)</option>
+</select>
+
+<br>
+
+抜刀術技
+<select id="batto" name = "batto">
+	<option default value=0>抜刀してから一定時間会心率が上がる</option>
+		<option value=10>1(会心率+10)</option>
+		<option value=20>2(会心率+20)</option>
+		<option value=40>3(会心率+40)</option>
+</select>
 
 <br>
 
@@ -245,5 +286,28 @@
 		<option value=0.3>1(会心倍率を1.3に)</option>
 		<option value=0.35>2(会心倍率を1.35に)</option>
 		<option value=0.4>3(会心倍率を1.4に)</option>
+
+<br>
+
+属性攻撃強化
+<select id="zokuseikougeki" name = "zokuseikougeki">
+	<option default value=0>属性値を上げる</option>
+		<option value=2>1(攻撃力+2)</option>
+		<option value=3>2(攻撃力+3)</option>
+		<option value=4>3(攻撃力+9)</option>
+		<option value=4.00>4(攻撃力*1.05+7)</option>
+		<option value=4.000>5(攻撃力*1.06+8)</option>
+		<option value=4.0000>6(攻撃力*1.08+9)</option>
+</select>
+
+<br>
+
+属性会心
+<select id="zokuseikaisihn" name = "zokuseikaishin">
+	<option default value=1>会心時属性ダメージを上げる</option>
+		<option value=1.05>1(1.05倍)</option>
+		<option value=1.1>3(1.1倍)</option>
+		<option value=1.15>3(1.15倍)</option>
+</select>
 </select>
 </html>
